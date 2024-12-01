@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    build: .
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+      - ./allure-results:/app/allure-results
+    environment:
+      - CI=true
+      - BASE_URL=${BASE_URL}
+      - API_KEY=${API_KEY}

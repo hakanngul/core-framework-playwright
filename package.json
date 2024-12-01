@@ -1,0 +1,29 @@
+{
+  "name": "core-framework",
+  "version": "1.0.0",
+  "description": "Advanced Playwright Test Automation Framework with POM and Factory patterns",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "test:debug": "playwright test --debug",
+    "test:parallel": "playwright test --workers=4",
+    "test:api": "playwright test tests/api/",
+    "test:e2e": "playwright test tests/e2e/",
+    "test:smoke": "playwright test --grep @smoke"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "e2e"
+  ],
+  "dependencies": {
+    "@playwright/test": "^1.42.1",
+    "dotenv": "^16.4.5",
+    "faker": "^5.5.3",
+    "winston": "^3.12.0",
+    "allure-playwright": "^2.14.1"
+  }
+}
