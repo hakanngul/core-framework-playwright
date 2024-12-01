@@ -1,5 +1,5 @@
-const { test, expect } = require('@playwright/test');
-const { PageFactory } = require('../src/factories/PageFactory');
+import { test, expect } from '@playwright/test';
+import { PageFactory } from '../src/factories/PageFactory.js';
 
 test.describe('Example Test Suite', () => {
     let pageFactory;

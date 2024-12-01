@@ -1,7 +1,7 @@
-const { expect } = require('@playwright/test');
-const { Logger } = require('../utils/Logger');
+import { test, expect } from '@playwright/test';
+import { Logger } from '../utils/Logger.js';
 
-class BasePage {
+export class BasePage {
     /**
      * @param {import('@playwright/test').Page} page 
      */

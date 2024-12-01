@@ -48,4 +48,4 @@ async function takeScreenshot(page, testInfo, options = {}) {
     }
 }
 
-module.exports = { takeScreenshot };
+export default { takeScreenshot };

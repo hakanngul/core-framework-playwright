@@ -1,4 +1,8 @@
-class PageFactory {
+import { LoginPage } from '../pages/LoginPage.js';
+import { HomePage } from '../pages/HomePage.js';
+import { ProfilePage } from '../pages/ProfilePage.js';
+
+export class PageFactory {
     /**
      * @param {import('@playwright/test').Page} page 
      */
@@ -14,13 +18,10 @@ class PageFactory {
     async createPage(pageName) {
         switch (pageName.toLowerCase()) {
             case 'login':
-                const { LoginPage } = require('../pages/LoginPage');
                 return new LoginPage(this.page);
             case 'home':
-                const { HomePage } = require('../pages/HomePage');
                 return new HomePage(this.page);
             case 'profile':
-                const { ProfilePage } = require('../pages/ProfilePage');
                 return new ProfilePage(this.page);
             default:
                 throw new Error(`Page ${pageName} not found in PageFactory`);

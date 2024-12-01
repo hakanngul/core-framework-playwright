@@ -1,7 +1,6 @@
-const { defineConfig, devices } = require('@playwright/test');
-require('dotenv').config();
+import { defineConfig, devices } from '@playwright/test';
 
-module.exports = defineConfig({
+export default defineConfig({
   testDir: './tests',
   timeout: 30 * 1000,
   expect: {

@@ -4,6 +4,7 @@
   "description": "Advanced Playwright Test Automation Framework with POM and Factory patterns",
   "type": "module",
   "scripts": {
+    "clean": "rm -rf allure-results/* allure-report/* playwright-report/*",
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",

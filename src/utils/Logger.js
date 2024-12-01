@@ -1,6 +1,6 @@
 import winston from 'winston';
 
-class Logger {
+export class Logger {
     constructor() {
         this.logger = winston.createLogger({
             level: 'info',
@@ -37,5 +37,3 @@ class Logger {
         this.logger.debug(message);
     }
 }
-
-export default Logger;
