@@ -1,4 +1,4 @@
-const winston = require('winston');
+import winston from 'winston';
 
 class Logger {
     constructor() {
@@ -38,4 +38,4 @@ class Logger {
     }
 }
 
-module.exports = { Logger };
+export default Logger;

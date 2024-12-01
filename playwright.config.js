@@ -13,8 +13,22 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [
     ['html'],
-    ['allure-playwright'],
-    ['list']
+    ['list'],
+    ['allure-playwright', {
+      detail: true,
+      outputFolder: 'allure-results',
+      suiteTitle: false,
+      categories: [
+        {
+          name: 'Flaky tests',
+          matchedStatuses: ['failed', 'broken', 'passed']
+        },
+        {
+          name: 'Failed tests',
+          matchedStatuses: ['failed']
+        }
+      ]
+    }]
   ],
   use: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
